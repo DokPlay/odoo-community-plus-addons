@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record id="module_category_community_plus" model="ir.module.category">
+            <field name="name">Module Health</field>
+            <field name="sequence">80</field>
+        </record>
+
+        <record id="res_groups_privilege_module_health" model="res.groups.privilege">
+            <field name="name">Module Health</field>
+            <field name="category_id" ref="module_category_community_plus"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="group_module_health_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="comment">Run Odoo module health scans and review module metadata issues.</field>
+            <field name="privilege_id" ref="res_groups_privilege_module_health"/>
+            <field name="implied_by_ids" eval="[Command.link(ref('base.group_system'))]"/>
+        </record>
+    </data>
+</odoo>

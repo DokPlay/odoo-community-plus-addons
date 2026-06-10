@@ -1,0 +1,143 @@
+<odoo>
+    <record id="cp_module_health_scan_view_list" model="ir.ui.view">
+        <field name="name">cp.module.health.scan.list</field>
+        <field name="model">cp.module.health.scan</field>
+        <field name="arch" type="xml">
+            <list string="Health Scans" decoration-danger="state == 'error'" decoration-success="state == 'done'">
+                <field name="name"/>
+                <field name="scan_date"/>
+                <field name="user_id"/>
+                <field name="total_modules" string="Total"/>
+                <field name="installed_modules" string="Inst."/>
+                <field name="problem_modules" string="Prob."/>
+                <field name="warning_count" string="Warn."/>
+                <field name="critical_count" string="Crit."/>
+                <field name="state" widget="badge" decoration-success="state == 'done'" decoration-danger="state == 'error'" decoration-info="state == 'draft'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="cp_module_health_scan_view_form" model="ir.ui.view">
+        <field name="name">cp.module.health.scan.form</field>
+        <field name="model">cp.module.health.scan</field>
+        <field name="arch" type="xml">
+            <form string="Health Scan">
+                <header>
+                    <button name="action_run_scan" string="Run Scan" type="object" class="btn-primary" invisible="state != 'draft'" groups="cp_module_health_checker.group_module_health_manager"/>
+                    <button name="action_rescan" string="Rescan" type="object" class="btn-primary" invisible="state == 'draft'" groups="cp_module_health_checker.group_module_health_manager"/>
+                    <button name="action_open_problem_modules" string="Open Problems" type="object" invisible="problem_modules == 0"/>
+                    <button name="action_open_critical" string="Open Critical" type="object" invisible="critical_count == 0"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,error"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_problem_modules" type="object" class="oe_stat_button" icon="fa-exclamation-triangle" invisible="problem_modules == 0">
+                            <field name="problem_modules" widget="statinfo" string="Problems"/>
+                        </button>
+                        <button name="action_open_critical" type="object" class="oe_stat_button" icon="fa-times-circle" invisible="critical_count == 0">
+                            <field name="critical_count" widget="statinfo" string="Critical"/>
+                        </button>
+                    </div>
+                    <div class="alert alert-info border-0 shadow-sm p-3 mb-4" role="status">
+                        <div class="d-flex flex-column flex-xl-row justify-content-between align-items-xl-center gap-3">
+                            <div>
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                                    <p class="badge text-bg-primary mb-0">Pro Features</p>
+                                    <p class="fw-semibold mb-0">Ready-to-use Pro tools for Odoo module audits, migrations, and reports.</p>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <p class="badge rounded-pill bg-white text-primary border mb-0">Migration Assistant Pro</p>
+                                    <p class="badge rounded-pill bg-white text-primary border mb-0">Advanced XML View Checker</p>
+                                    <p class="badge rounded-pill bg-white text-primary border mb-0">Python Deprecated API Scanner</p>
+                                    <p class="badge rounded-pill bg-white text-primary border mb-0">PDF Audit Report</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary text-nowrap" href="http://odoocustom.online/" target="_blank" role="button">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="scan_date" readonly="1"/>
+                            <field name="user_id" readonly="1"/>
+                            <field name="company_id" readonly="1"/>
+                            <field name="include_uninstalled"/>
+                        </group>
+                        <group string="Totals">
+                            <field name="total_modules" readonly="1"/>
+                            <field name="installed_modules" readonly="1"/>
+                            <field name="problem_modules" readonly="1"/>
+                            <field name="warning_count" readonly="1"/>
+                            <field name="critical_count" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="notes" invisible="not notes"/>
+                    <notebook>
+                        <page string="Modules" name="lines">
+                            <field name="line_ids" readonly="1">
+                                <list string="Checked Modules"
+                                      decoration-danger="severity == 'critical'"
+                                      decoration-warning="severity == 'warning'"
+                                      decoration-muted="severity == 'info'"
+                                      decoration-success="severity == 'ok'">
+                                    <field name="severity" widget="badge"
+                                           decoration-success="severity == 'ok'"
+                                           decoration-info="severity == 'info'"
+                                           decoration-warning="severity == 'warning'"
+                                           decoration-danger="severity == 'critical'"/>
+                                    <field name="technical_name"/>
+                                    <field name="module_name"/>
+                                    <field name="module_state" string="State"/>
+                                    <field name="author"/>
+                                    <field name="license"/>
+                                    <field name="version"/>
+                                    <field name="issue_count" string="Count"/>
+                                    <field name="issues_text"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="cp_module_health_scan_view_search" model="ir.ui.view">
+        <field name="name">cp.module.health.scan.search</field>
+        <field name="model">cp.module.health.scan</field>
+        <field name="arch" type="xml">
+            <search string="Search Health Scans">
+                <field name="name"/>
+                <field name="user_id"/>
+                <filter name="done" string="Done" domain="[('state', '=', 'done')]"/>
+                <filter name="error" string="Error" domain="[('state', '=', 'error')]"/>
+                <separator/>
+                <filter name="has_problems" string="Has Problems" domain="[('problem_modules', '&gt;', 0)]"/>
+                <filter name="has_critical" string="Has Critical" domain="[('critical_count', '&gt;', 0)]"/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_user" string="User" context="{'group_by': 'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_cp_module_health_scan" model="ir.actions.act_window">
+        <field name="name">Health Scans</field>
+        <field name="res_model">cp.module.health.scan</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="cp_module_health_scan_view_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a module health scan
+            </p>
+            <p>
+                Run a read-only check of installed Odoo modules and review metadata or dependency issues.
+            </p>
+        </field>
+    </record>
+</odoo>

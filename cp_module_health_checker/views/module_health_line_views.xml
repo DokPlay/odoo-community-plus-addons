@@ -1,0 +1,152 @@
+<odoo>
+    <record id="cp_module_health_line_view_list" model="ir.ui.view">
+        <field name="name">cp.module.health.line.list</field>
+        <field name="model">cp.module.health.line</field>
+        <field name="arch" type="xml">
+            <list string="Problem Modules"
+                  create="false"
+                  edit="false"
+                  delete="false"
+                  decoration-danger="severity == 'critical'"
+                  decoration-warning="severity == 'warning'"
+                  decoration-muted="severity == 'info'"
+                  decoration-success="severity == 'ok'">
+                <field name="severity" widget="badge"
+                       decoration-success="severity == 'ok'"
+                       decoration-info="severity == 'info'"
+                       decoration-warning="severity == 'warning'"
+                       decoration-danger="severity == 'critical'"/>
+                <field name="technical_name"/>
+                <field name="module_name"/>
+                <field name="module_state" string="State"/>
+                <field name="author"/>
+                <field name="license"/>
+                <field name="version"/>
+                <field name="issue_count" string="Count"/>
+                <field name="issues_text"/>
+                <field name="is_potential_custom" optional="hide"/>
+                <field name="scan_id" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="cp_module_health_line_view_form" model="ir.ui.view">
+        <field name="name">cp.module.health.line.form</field>
+        <field name="model">cp.module.health.line</field>
+        <field name="arch" type="xml">
+            <form string="Module Health Line" create="false" edit="false" delete="false">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="technical_name"/>
+                        </h1>
+                    </div>
+                    <div class="alert alert-info border-0 shadow-sm p-3 mb-4" role="status">
+                        <div class="d-flex flex-column flex-xl-row justify-content-between align-items-xl-center gap-3">
+                            <div>
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                                    <p class="badge text-bg-primary mb-0">Pro Features</p>
+                                    <p class="fw-semibold mb-0">Ready-to-use Pro tools for Odoo module audits, migrations, and reports.</p>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <p class="badge rounded-pill bg-white text-primary border mb-0">Migration Assistant Pro</p>
+                                    <p class="badge rounded-pill bg-white text-primary border mb-0">Advanced XML View Checker</p>
+                                    <p class="badge rounded-pill bg-white text-primary border mb-0">Python Deprecated API Scanner</p>
+                                    <p class="badge rounded-pill bg-white text-primary border mb-0">PDF Audit Report</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary text-nowrap" href="http://odoocustom.online/" target="_blank" role="button">Learn More</a>
+                        </div>
+                    </div>
+                    <group>
+                        <group string="Module">
+                            <field name="scan_id"/>
+                            <field name="module_id"/>
+                            <field name="module_name"/>
+                            <field name="module_state" string="State"/>
+                            <field name="category"/>
+                            <field name="is_potential_custom" string="Custom"/>
+                        </group>
+                        <group string="Metadata">
+                            <field name="author"/>
+                            <field name="license"/>
+                            <field name="version"/>
+                            <field name="website"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Result">
+                            <field name="severity" widget="badge"
+                                   decoration-success="severity == 'ok'"
+                                   decoration-info="severity == 'info'"
+                                   decoration-warning="severity == 'warning'"
+                                   decoration-danger="severity == 'critical'"/>
+                            <field name="issue_count" string="Issues"/>
+                            <field name="issues_text"/>
+                        </group>
+                        <group string="Dependencies">
+                            <field name="dependency_names"/>
+                            <field name="missing_dependency_names"/>
+                        </group>
+                    </group>
+                    <group string="Summary">
+                        <field name="summary" nolabel="1"/>
+                    </group>
+                    <group string="Flags" groups="base.group_no_one">
+                        <field name="missing_author"/>
+                        <field name="missing_license"/>
+                        <field name="missing_version"/>
+                        <field name="missing_website"/>
+                        <field name="missing_description"/>
+                        <field name="has_missing_dependencies"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="cp_module_health_line_view_search" model="ir.ui.view">
+        <field name="name">cp.module.health.line.search</field>
+        <field name="model">cp.module.health.line</field>
+        <field name="arch" type="xml">
+            <search string="Search Module Health Lines">
+                <field name="technical_name"/>
+                <field name="module_name"/>
+                <field name="author"/>
+                <field name="license"/>
+                <field name="issues_text"/>
+                <filter name="critical" string="Critical" domain="[('severity', '=', 'critical')]"/>
+                <filter name="warning" string="Warning" domain="[('severity', '=', 'warning')]"/>
+                <filter name="info" string="Info" domain="[('severity', '=', 'info')]"/>
+                <separator/>
+                <filter name="potential_custom" string="Potential Custom" domain="[('is_potential_custom', '=', True)]"/>
+                <filter name="missing_license" string="Missing License" domain="[('missing_license', '=', True)]"/>
+                <filter name="missing_author" string="Missing Author" domain="[('missing_author', '=', True)]"/>
+                <filter name="missing_dependencies" string="Missing Dependencies" domain="[('has_missing_dependencies', '=', True)]"/>
+                <group>
+                    <filter name="group_by_severity" string="Severity" context="{'group_by': 'severity'}"/>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'module_state'}"/>
+                    <filter name="group_by_author" string="Author" context="{'group_by': 'author'}"/>
+                    <filter name="group_by_license" string="License" context="{'group_by': 'license'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_cp_module_health_problem_lines" model="ir.actions.act_window">
+        <field name="name">Problem Modules</field>
+        <field name="res_model">cp.module.health.line</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('severity', '!=', 'ok')]</field>
+        <field name="search_view_id" ref="cp_module_health_line_view_search"/>
+        <field name="context">{'search_default_group_by_severity': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No problem modules found
+            </p>
+            <p>
+                Run a health scan to populate this list.
+            </p>
+        </field>
+    </record>
+</odoo>

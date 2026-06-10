@@ -1,0 +1,642 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cp_module_health_checker
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260609\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-09 17:03+0000\n"
+"PO-Revision-Date: 2026-06-09 17:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__author
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Author"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__category
+msgid "Category"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.module.module,shortdesc:base.module_cp_module_health_checker
+msgid "CP Module Health Checker"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.module.module,description:base.module_cp_module_health_checker
+msgid ""
+"Audit installed Odoo modules for missing metadata, dependency issues, and potential custom module indicators.\n"
+"The checker is read-only and keeps scan history for review."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.module.module,summary:base.module_cp_module_health_checker
+msgid "Audit installed Odoo modules for metadata and dependency issues"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__company_id
+msgid "Company"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.actions.act_window,help:cp_module_health_checker.action_cp_module_health_scan
+msgid "Create a module health scan"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__create_uid
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__create_date
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__severity__critical
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Critical"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__critical_count
+msgid "Critical Count"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Critical Modules"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Dependencies"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__dependency_names
+msgid "Dependency Names"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Dependency is not installed: %s"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__display_name
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_scan__state__done
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_search
+msgid "Done"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_scan__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_scan__state__error
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_search
+msgid "Error"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Flags"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_search
+msgid "Has Critical"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__has_missing_dependencies
+msgid "Has Missing Dependencies"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_search
+msgid "Has Problems"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Health Scan"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.actions.act_window,name:cp_module_health_checker.action_cp_module_health_scan
+#: model:ir.ui.menu,name:cp_module_health_checker.menu_module_health_scans
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_list
+msgid "Health Scans"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__id
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__id
+msgid "ID"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__include_uninstalled
+msgid "Include Uninstalled"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__severity__info
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Info"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__installed_modules
+msgid "Installed Modules"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__is_potential_custom
+msgid "Is Potential Custom"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__issues_text
+msgid "Issues Text"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__write_uid
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__write_date
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__license
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "License"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:res.groups,name:cp_module_health_checker.group_module_health_manager
+msgid "Manager"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Metadata"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__missing_author
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Missing Author"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Missing Dependencies"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__missing_dependency_names
+msgid "Missing Dependency Names"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__missing_description
+msgid "Missing Description"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__missing_license
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Missing License"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__missing_version
+msgid "Missing Version"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__missing_website
+msgid "Missing Website"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Missing author"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Missing description"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Missing license"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Missing version"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Missing website"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__module_id
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Module"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.ui.menu,name:cp_module_health_checker.menu_community_plus_root
+#: model:res.groups.privilege,name:cp_module_health_checker.res_groups_privilege_module_health
+#: model:ir.module.category,name:cp_module_health_checker.module_category_community_plus
+msgid "Module Health"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model,name:cp_module_health_checker.model_cp_module_health_line
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Module Health Line"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model,name:cp_module_health_checker.model_cp_module_health_scan
+msgid "Module Health Scan"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__module_name
+msgid "Module Name"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__module_state
+msgid "Module State"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__name
+msgid "Name"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.actions.act_window,help:cp_module_health_checker.action_cp_module_health_problem_lines
+msgid "No problem modules found"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__notes
+msgid "Notes"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__severity__ok
+msgid "OK"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Only Module Health Managers can run module health scans."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Open Critical"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Open Problems"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Potential Custom"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Potential custom module"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+#: model:ir.actions.act_window,name:cp_module_health_checker.action_cp_module_health_problem_lines
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__problem_modules
+#: model:ir.ui.menu,name:cp_module_health_checker.menu_module_health_problem_lines
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_list
+msgid "Problem Modules"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Problems"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Rescan"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Result"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:res.groups,comment:cp_module_health_checker.group_module_health_manager
+msgid "Run Odoo module health scans and review module metadata issues."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Run Scan"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.actions.act_window,help:cp_module_health_checker.action_cp_module_health_problem_lines
+msgid "Run a health scan to populate this list."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.actions.act_window,help:cp_module_health_checker.action_cp_module_health_scan
+msgid ""
+"Run a read-only check of installed Odoo modules and review metadata or "
+"dependency issues."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__scan_id
+msgid "Scan"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Scan %s"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__scan_date
+msgid "Scan Date"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "Scan failed: %s"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_search
+msgid "Search Health Scans"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Search Module Health Lines"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__severity
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Severity"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__state
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_search
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_list
+msgid "State"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__summary
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Summary"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__technical_name
+msgid "Technical Name"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__total_modules
+msgid "Total Modules"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Totals"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__user_id
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_search
+msgid "User"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__version
+msgid "Version"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__severity__warning
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_search
+msgid "Warning"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__warning_count
+msgid "Warning Count"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__website
+msgid "Website"
+msgstr ""
+
+#. module: cp_module_health_checker
+#. odoo-python
+#: code:addons/cp_module_health_checker/models/module_health_scan.py:0
+msgid "scan_id"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.ui.menu,name:cp_module_health_checker.menu_module_health_root
+msgid "Checks"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Checked Modules"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_scan__line_ids
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Modules"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields,field_description:cp_module_health_checker.field_cp_module_health_line__issue_count
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Issues"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_list
+msgid "Total"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_list
+msgid "Inst."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_list
+msgid "Warn."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_list
+msgid "Crit."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+msgid "Custom"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__module_state__uninstallable
+msgid "Uninstallable"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__module_state__uninstalled
+msgid "Not Installed"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__module_state__installed
+msgid "Installed"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__module_state__to_upgrade
+msgid "To be upgraded"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__module_state__to_remove
+msgid "To be removed"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model:ir.model.fields.selection,name:cp_module_health_checker.selection__cp_module_health_line__module_state__to_install
+msgid "To be installed"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_list
+msgid "Prob."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_list
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Count"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Pro Features"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Ready-to-use Pro tools for Odoo module audits, migrations, and reports."
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Migration Assistant Pro"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Advanced XML View Checker"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Python Deprecated API Scanner"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "PDF Audit Report"
+msgstr ""
+
+#. module: cp_module_health_checker
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_line_view_form
+#: model_terms:ir.ui.view,arch_db:cp_module_health_checker.cp_module_health_scan_view_form
+msgid "Learn More"
+msgstr ""

@@ -1,0 +1,26 @@
+<odoo>
+    <menuitem id="menu_community_plus_root"
+              name="Module Health"
+              sequence="80"
+              groups="cp_module_health_checker.group_module_health_manager"/>
+
+    <menuitem id="menu_module_health_root"
+              name="Checks"
+              parent="menu_community_plus_root"
+              sequence="10"
+              groups="cp_module_health_checker.group_module_health_manager"/>
+
+    <menuitem id="menu_module_health_scans"
+              name="Health Scans"
+              parent="menu_module_health_root"
+              action="action_cp_module_health_scan"
+              sequence="10"
+              groups="cp_module_health_checker.group_module_health_manager"/>
+
+    <menuitem id="menu_module_health_problem_lines"
+              name="Problem Modules"
+              parent="menu_module_health_root"
+              action="action_cp_module_health_problem_lines"
+              sequence="20"
+              groups="cp_module_health_checker.group_module_health_manager"/>
+</odoo>
