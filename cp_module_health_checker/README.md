@@ -38,3 +38,13 @@ http://odoocustom.online/
 ```
 
 Users can review the Pro tools and details on the website.
+
+## License
+
+This module is distributed under the GNU Lesser General Public License version 3.0.
+
+Odoo manifest license: `LGPL-3`
+
+SPDX identifier: `LGPL-3.0-only`
+
+See: https://www.gnu.org/licenses/lgpl-3.0.html
